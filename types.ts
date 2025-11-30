@@ -2,7 +2,8 @@ export enum SwimStyle {
   FREESTYLE = 'Freestyle',
   BUTTERFLY = 'Butterfly',
   BREASTSTROKE = 'Breaststroke',
-  BACKSTROKE = 'Backstroke'
+  BACKSTROKE = 'Backstroke',
+  INDIVIDUAL_MEDLEY = 'Individual Medley'
 }
 
 export interface LapData {
@@ -22,6 +23,7 @@ export interface SessionData {
   caloriesBurned: number;
   laps: LapData[];
   averageHeartRate: number;
+  targetDistance?: number;
 }
 
 export interface ProfessionalBenchmark {
@@ -38,6 +40,14 @@ export interface JournalEntry {
   mood: 'Great' | 'Good' | 'Tired' | 'Exhausted' | 'Injured';
   notes: string;
   aiFeedback?: string;
+}
+
+export interface WorkoutPreset {
+  id: string;
+  title: string;
+  style: SwimStyle;
+  distanceMeters?: number; // undefined means Open Swim
+  color: string;
 }
 
 export type ViewState = 'DASHBOARD' | 'ACTIVE_SWIM' | 'ANALYSIS' | 'JOURNAL';
