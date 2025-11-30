@@ -1,0 +1,7 @@
+{
+  "name": "HydroSync AI",
+  "description": "A professional-grade swim analysis application simulating an Apple Watch interface. Tracks real-time telemetry, compares performance against Olympic benchmarks using Gemini AI, and provides a smart recovery journal.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
